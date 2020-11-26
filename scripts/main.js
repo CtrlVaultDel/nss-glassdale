@@ -1,2 +1,5 @@
-import { criminalList } from "./criminals/criminal";
-import {  } from "./criminals/criminalList.js"
+import { criminalList } from "./criminals/criminalList.js";
+
+criminalList()
+
+//.then(toPage => document.querySelector(".criminalsContainer").innerHTML = toPage);
