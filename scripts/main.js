@@ -1,5 +1,8 @@
+import { convictionSelect } from "./convictions/convictionSelection.js";
 import { criminalList } from "./criminals/criminalList.js";
 
-criminalList()
+// Sends filter options based off convictions to the DOM
+convictionSelect();
 
-//.then(toPage => document.querySelector(".criminalsContainer").innerHTML = toPage);
+// Sends full list of criminals to the DOM
+criminalList()
