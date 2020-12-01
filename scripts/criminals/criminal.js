@@ -1,4 +1,4 @@
-// Converts the relevant object information into HTML for criminalList.js
+// Converts the relevant criminal object information into HTML to be used in criminalList.js
 export const criminalHTMLer = (criminalObject) =>{
     return `
     <section class="criminal">
