@@ -9,4 +9,4 @@ export const criminalHTMLer = (criminalObject) =>{
         <div class="criminal__incarceration-end"><b>Term end:</b> ${new Date(criminalObject.incarceration.end).toLocaleDateString('en-US')}</div>
     </section>
     `;
-}
+};

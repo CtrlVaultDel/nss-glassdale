@@ -13,7 +13,7 @@ export const getOfficers = () => {
         .then(response => response.json())
 
         // We then take the JS data and copy it into our local officers array.
-        .then(parsedOfficers => officers = parsedOfficers)
+        .then(parsedOfficers => officers = parsedOfficers);
 };
 
 // -----Basic methodology when fetching from an API-----
