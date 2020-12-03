@@ -1,10 +1,11 @@
 // The convictionSelect component, which will invoke useConvictions() and then iterate that collection to fill out the dropdown in the browser.
 
 /*
- *   ConvictionSelect component that renders a select HTML element
+ *   convictionSelect component that renders a select HTML element
  *   which lists all convictions in the Glassdale PD API
  */
-import { getConvictions, useConvictions } from "./ConvictionProvider.js";
+// Imports
+import { getConvictions, useConvictions } from "./convictionProvider.js";
 
 // Selectors
 const contentTarget = document.querySelector(".filters__crime");
@@ -21,7 +22,7 @@ const render = convictionsCollection => {
     // Generate option elements
     contentTarget.innerHTML = `
         <select class="dropdown" id="crimeSelect">
-            <option value="0">all crimes</option>
+            <option value="0">All Crimes</option>
             ${
                 convictionsCollection.map(convictionObject => 
                     `<option value="${convictionObject.name}">${convictionObject.name}</option>`).join("") 
@@ -36,7 +37,7 @@ eventHub.addEventListener("change", event => {
     // Only do this if the "crimeSelect" element was changed
     if (event.target.id === "crimeSelect") {
         // Create custom event named "crimeChosen"
-        const customEvent = new CustomEvent("crimeChosen", {
+        const customEvent = new CustomEvent("crimeSelected", {
             detail: {
                 crimeThatWasChosen: event.target.value
             }
