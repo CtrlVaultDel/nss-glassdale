@@ -1,3 +1,4 @@
+// Will be filled when getCriminals() is called and copied by useCriminals()
 let criminals = [];
 
 // Returns a copy of the criminals array

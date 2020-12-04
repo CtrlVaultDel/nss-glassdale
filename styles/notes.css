@@ -1,0 +1,42 @@
+.noteFormContainer{
+    display:flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.noteFormContainer input{
+    padding: 3px;
+    margin: 5px;
+    border-style: none;
+    border-radius: 5px;
+}
+
+.noteFormContainer button{
+    width: 85px;
+    align-self: center;
+    border-radius: 5px;
+}
+
+.noteForm{
+    display: flex;
+    flex-direction: column;
+    border: solid black 2px;
+    background: lightgray;
+    width: 33%;
+    padding: 5px;
+}
+
+.notesContainer {
+    display:flex;
+    flex-wrap: wrap;
+    width: 99%;
+    justify-content: center;
+    margin: 3px 5px 3px 5px;
+}
+
+.note {
+    border: solid black 2px;
+    margin: 5px 0px;
+    padding: 3px;
+    flex-basis: 50%;
+}

@@ -1,0 +1,8 @@
+.filters{
+    display: flex;
+    justify-content: center;
+}
+
+.filter{
+    margin: 0 5px;
+}

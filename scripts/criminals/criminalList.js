@@ -1,3 +1,4 @@
+// Imports
 import { getCriminals, useCriminals } from './criminalProvider.js';
 import { criminalHTMLer } from './criminal.js';
 
@@ -5,16 +6,17 @@ import { criminalHTMLer } from './criminal.js';
 const contentElement = document.querySelector(".criminalsContainer");
 const eventHub = document.querySelector(".container");
 
+// Will be filled after calling the criminalList() function
 let criminals = [];
 
 export const criminalList = () => {
-    // Call the getCriminals function and attach another callback function to it that calls 
-    // useCriminals in order to save the criminals array to a local variable. After that, use
-    // reduce on the array along with criminalHTMLer to convert the entire array to a string that
-    // will be added to the DOM.
-
-    // We can use .then because the getCriminals() function returns a promise object
-    // As soon as the promise has been resolved, continue with the following code
+    /* 
+    We can use .then on the getCriminals() function because it returns a promise object.
+    As soon as the promise has been resolved, this then calls on useCriminals() which
+    returns a copied array of objects that is then stored into the empty criminals array.
+    the criminals array is then converted into HTML and joined together via the reduce method
+    and criminalHTMLer() function from ./criminal.js
+    */
     getCriminals().then(() => {
         criminals = useCriminals();
         contentElement.innerHTML = criminals.reduce(
@@ -23,25 +25,57 @@ export const criminalList = () => {
     });
 };
 
-// Listen for the custom event dispatched from convictionSelect
-eventHub.addEventListener("crimeChosen", event => {
-    
-    // If the selection was anything besides the default id, filter based off that result.
-    if (event.detail.crimeThatWasChosen !== "0"){
-      const matchingCriminals = criminals.filter(criminal =>
-            // Filter criminals to only those who committed the selected crime
-            criminal.conviction === event.detail.crimeThatWasChosen);
 
-        // Pass the filtered criminals to render() as an argument
-        render(matchingCriminals);
-
-    // If the selection is the default id, just render all criminals on the page
-    } else {
-        render(criminals);
-    }
-})
-
-// Render to the DOM the criminals that were selected based off of the crime filter
+// Renders the criminals to the DOM that were selected based off of the selected filter
 const render = criminalCollection => 
     contentElement.innerHTML = criminalCollection.map(criminal => 
         criminalHTMLer(criminal)).join("");
+
+
+// -------- LISTEN FOR CRIME FILTER (START) --------
+// When a crime is selected from the drop down menu, execute the following code
+eventHub.addEventListener("crimeSelected", event => {
+    const criminals = useCriminals()
+    // If anything besides the default value (All Crimes) was selected, filter based off the selection
+    if (event.detail.crimeThatWasChosen !== "0"){
+      const matchingCriminals = criminals.filter(criminal =>
+            // Filter criminals who committed the selected crime
+            criminal.conviction === event.detail.crimeThatWasChosen);
+
+        // Render the filtered criminals to the DOM
+        render(matchingCriminals);
+    } 
+    // If the default value was chosen (All Crimes), then show all criminals
+    else {
+        render(criminals);
+    };
+});
+// -------- LISTEN FOR CRIME FILTER (END) --------
+
+
+// -------- LISTEN FOR OFFICER FILTER (START) --------
+// When an officer is selected from the drop down menu, execute the following code
+eventHub.addEventListener("officerSelected", event => {
+    // If anything besides the default value (All Officers) was selected, filter based off the selection
+    if (event.detail.officer !== "0"){
+        // Filter criminals who were arrested by the selected officer
+        const matchingOfficers = criminals.filter(criminal =>
+            criminal.arrestingOfficer === event.detail.officer);
+
+        // Render the filtered criminals to the DOM
+        render(matchingOfficers);
+    
+    }  
+    // If the default value was chosen (All Officers), then show all criminals
+    else {
+        render(criminals);
+    }
+    
+    const officerName = event.detail.officer;
+
+    // Pull criminals arrested by the selected officer
+    criminals.map(
+        criminalObject => criminalObject.arrestingOfficer === officerName
+    )
+})
+// -------- LISTEN FOR OFFICER FILTER (END) --------
