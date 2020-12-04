@@ -1,9 +1,3 @@
 @import "./criminals.css";
-
-.filters{
-    display: flex;
-}
-
-.filter{
-    margin: 0 5px;
-}
+@import "./notes.css";
+@import "./filters.css";

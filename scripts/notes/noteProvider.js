@@ -1,17 +1,22 @@
-const eventHub = document.querySelector(".container")
+// Selectors
+const eventHub = document.querySelector(".container");
+
+// Local container of notes
+let notes = [];
 
 const dispatchStateChangeEvent = () => {
-    const noteStateChangedEvent = new CustomEvent("noteStateChanged")
+    const noteStateChangedEvent = new CustomEvent("noteStateChanged");
 
-    eventHub.dispatchEvent(noteStateChangedEvent)
-}
+    eventHub.dispatchEvent(noteStateChangedEvent);
+};
 
-const getNotes = () => {
+export const getNotes = () => {
     return fetch('http://localhost:8088/notes')
         .then(response => response.json())
-        .then(parsedNotes => notes = parsedNotes)
+        .then(parsedNotes => notes = parsedNotes);
+};
 
-}
+export const useNotes = () => notes.slice();
 
 export const saveNote = note => {
     return fetch('http://localhost:8088/notes', {
@@ -22,5 +27,5 @@ export const saveNote = note => {
         body: JSON.stringify(note)
     })
     .then(getNotes)
-    .then(dispatchStateChangeEvent)
-}
+    .then(dispatchStateChangeEvent);
+};
