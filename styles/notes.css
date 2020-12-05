@@ -23,13 +23,14 @@
     border: solid black 2px;
     background: lightgray;
     width: 33%;
+    min-width: 215px;
     padding: 5px;
+    border-radius: 10px;
 }
 
 .notesContainer {
     display:flex;
     flex-wrap: wrap;
-    width: 99%;
     justify-content: center;
     margin: 3px 5px 3px 5px;
 }
@@ -39,4 +40,7 @@
     margin: 5px 0px;
     padding: 3px;
     flex-basis: 50%;
+    background: #D1D5DE;
+    border-radius: 10px;
+    min-width: 160px;
 }
