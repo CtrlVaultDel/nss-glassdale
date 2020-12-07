@@ -7,7 +7,7 @@ const contentElement = document.querySelector(".criminalsContainer");
 const eventHub = document.querySelector(".container");
 
 // Will be filled after calling the criminalList() function
-let criminals = [];
+export let criminals = [];
 
 export const criminalList = () => {
     /* 
@@ -76,6 +76,23 @@ eventHub.addEventListener("officerSelected", event => {
     // Pull criminals arrested by the selected officer
     criminals.map(
         criminalObject => criminalObject.arrestingOfficer === officerName
-    )
+    );
 })
 // -------- LISTEN FOR OFFICER FILTER (END) --------
+
+
+
+// BROKEN START HERE
+// Imports
+import { alibiHTMLer } from "/scripts/alibis/alibi.js";
+
+// Selectors
+const alibiElement = document.querySelector("alibisContainer");
+
+// ------- LISTEN FOR ALIBI BUTTON (START) -------
+eventHub.addEventListener("alibisSelected", event =>{
+    const criminalChosen = event.detail.criminalName;
+    const alibiList = event.detail.theAlibisChosen;
+    alibiElement = alibiHTMLer(criminalChosen, alibiList);
+});
+// -------- LISTEN FOR ALIBI BUTTON (END) --------
