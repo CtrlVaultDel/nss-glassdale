@@ -1,18 +1,9 @@
 // Converts the relevant associate's alibi information into HTML to be used in alibiList.js
-export const alibiHTMLer = (criminal, associate) =>{
+export const alibiHTMLer = (associateObject) =>{
     return `
-    <section class="criminalSelected">
-        <h3 class="criminalSelected__name">
-            ${criminal}
-        </h3>
-    </section>
     <section class="associate">
-        <h4 class="associate__name">
-            ${associate.name}
-        </h4> 
-        <div class="associate__alibi">
-            <b>Alibi:</b> ${associate.alibi}
-        </div>
+        <h4 class="associate__name"><b>Associate:</b>${associateObject.name}</h4> 
+        <div class="associate__alibi"><b>Alibi:</b> ${associateObject.alibi}</div>
     </section>
     `;
 };

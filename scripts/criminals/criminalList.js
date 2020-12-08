@@ -79,20 +79,3 @@ eventHub.addEventListener("officerSelected", event => {
     );
 })
 // -------- LISTEN FOR OFFICER FILTER (END) --------
-
-
-
-// BROKEN START HERE
-// Imports
-import { alibiHTMLer } from "/scripts/alibis/alibi.js";
-
-// Selectors
-const alibiElement = document.querySelector("alibisContainer");
-
-// ------- LISTEN FOR ALIBI BUTTON (START) -------
-eventHub.addEventListener("alibisSelected", event =>{
-    const criminalChosen = event.detail.criminalName;
-    const alibiList = event.detail.theAlibisChosen;
-    alibiElement = alibiHTMLer(criminalChosen, alibiList);
-});
-// -------- LISTEN FOR ALIBI BUTTON (END) --------

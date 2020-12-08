@@ -27,8 +27,6 @@ export const noteForm = () => render();
 eventHub.addEventListener("click", clickEvent => {
     //console.log(clickEvent.target)
     if (clickEvent.target.id === "saveNote") {
-
-        // ISSUE IS HERE
         let text = document.getElementById("note--text").value;
         let author = document.getElementById("note--author").value;
         let suspect = document.getElementById("note--suspect").value;
