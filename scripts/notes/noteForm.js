@@ -14,7 +14,7 @@ const render = () => {
             <input type="text" id="note--suspect" placeholder="Suspect Name">
             <button id="saveNote">Save Note</button>
             <div class="note--display">Display Notes: 
-                <input type="checkbox" checked="true" id="note--checkbox">
+                <input type="checkbox" id="note--checkbox">
             </div>
         </div>
     `;
