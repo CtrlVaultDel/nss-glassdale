@@ -2,7 +2,7 @@
 export const alibiHTMLer = (associateObject) =>{
     return `
     <section class="associate">
-        <h4 class="associate__name"><b>Associate:</b>${associateObject.name}</h4> 
+        <h3 class="associate__name">${associateObject.name}</h3> 
         <div class="associate__alibi"><b>Alibi:</b> ${associateObject.alibi}</div>
     </section>
     `;

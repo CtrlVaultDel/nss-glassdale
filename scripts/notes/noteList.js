@@ -15,11 +15,11 @@ export const noteList = () => {
         notes = useNotes();
         const notesToPage = notes.map(note => noteHTMLer(note)).join("");
         noteLocation.innerHTML = notesToPage;
-    })
-}
+    });
+};
 
 // Listen to see if the notes are updated and push them to the DOM when they are
-eventHub.addEventListener("noteStateChanged", () => noteList())
+eventHub.addEventListener("noteStateChanged", () => noteList());
 
 // Listen for a "change" event in the checkbox
 checkBox.addEventListener("change", event => {
@@ -33,6 +33,6 @@ checkBox.addEventListener("change", event => {
         // If the checkbox is NOT checked, hide the notes
         else{
             notesContainer.style.display = "none";
-        }
-    }
-})
+        };
+    };
+});

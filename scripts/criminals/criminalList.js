@@ -64,7 +64,6 @@ eventHub.addEventListener("officerSelected", event => {
 
         // Render the filtered criminals to the DOM
         render(matchingOfficers);
-    
     }  
     // If the default value was chosen (All Officers), then show all criminals
     else {
