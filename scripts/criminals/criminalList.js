@@ -7,7 +7,7 @@ const contentElement = document.querySelector(".criminalsContainer");
 const eventHub = document.querySelector(".container");
 
 // Will be filled after calling the criminalList() function
-let criminals = [];
+export let criminals = [];
 
 export const criminalList = () => {
     /* 
@@ -64,7 +64,6 @@ eventHub.addEventListener("officerSelected", event => {
 
         // Render the filtered criminals to the DOM
         render(matchingOfficers);
-    
     }  
     // If the default value was chosen (All Officers), then show all criminals
     else {
@@ -76,6 +75,6 @@ eventHub.addEventListener("officerSelected", event => {
     // Pull criminals arrested by the selected officer
     criminals.map(
         criminalObject => criminalObject.arrestingOfficer === officerName
-    )
+    );
 })
 // -------- LISTEN FOR OFFICER FILTER (END) --------

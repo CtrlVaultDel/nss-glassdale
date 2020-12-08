@@ -4,11 +4,12 @@
     margin: 10px;
 }
 
-.noteFormContainer input{
+.noteFormContainer input, textarea{
     padding: 3px;
     margin: 5px;
     border-style: none;
     border-radius: 5px;
+    max-width: 96%;
 }
 
 .noteFormContainer button{
@@ -23,13 +24,14 @@
     border: solid black 2px;
     background: lightgray;
     width: 33%;
+    min-width: 215px;
     padding: 5px;
+    border-radius: 10px;
 }
 
 .notesContainer {
-    display:flex;
+    display:none;
     flex-wrap: wrap;
-    width: 99%;
     justify-content: center;
     margin: 3px 5px 3px 5px;
 }
@@ -39,4 +41,7 @@
     margin: 5px 0px;
     padding: 3px;
     flex-basis: 50%;
+    background: #D1D5DE;
+    border-radius: 10px;
+    min-width: 160px;
 }

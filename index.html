@@ -1,36 +1,39 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Glassdale PD</title>
-    <link rel="stylesheet" href="./styles/main.css">
-</head>
-<body>
-    <!-- The <main> element will be considered the "event hub" -->
-    <main class="container"> 
-        <header>
-            <div class="filters">
-                <div class="filter filters__crime">
-                    <!-- A filter provided by JS that allows the user to filter via convictions/crimes -->
+    <head>
+        <meta charset="utf-8">
+        <title>Glassdale PD</title>
+        <link rel="stylesheet" href="./styles/main.css">
+    </head>
+    <body>
+        <!-- The <main> element will be considered the "event hub" -->
+        <main class="container"> 
+            <header>
+                <div class="filters">
+                    <div class="filter filters__crime">
+                        <!-- A filter provided by JS that allows the user to filter via convictions/crimes -->
+                    </div>
+                    <div class="filter filters__incarceration">
+                        <!-- A filter provided by JS that allows the user to filter via incarceration dates -->
+                    </div>
+                    <div class="filter filters__officer">
+                        <!-- A filter provided by JS that allows the user to filter via officer that made the arrest -->
+                    </div>
                 </div>
-                <div class="filter filters__incarceration">
-                    <!-- A filter provided by JS that allows the user to filter via incarceration dates -->
-                </div>
-                <div class="filter filters__officer">
-                    <!-- A filter provided by JS that allows the user to filter via officer that made the arrest -->
-                </div>
-            </div>
-        </header>
-        <form class="noteFormContainer">
-            <!-- The form will be added by JS -->
-        </form>
-        <article class="notesContainer">
-
-        </article>
-        <article class="criminalsContainer">
-            <!-- Criminals will be added here by JS -->
-        </article>
-    </main>
-    <script type="module" src="./scripts/main.js"></script>
-</body>
+            </header>
+            <form class="noteFormContainer">
+                <!-- The form will be added by JS -->
+            </form>
+            <article class="notesContainer">
+                <!-- Notes will be added by JS -->
+            </article>
+            <article class="alibisContainer">
+                <!-- Associates' alibis for a selected criminal will appear here -->
+            </article>
+            <article class="criminalsContainer">
+                <!-- Criminals will be added here by JS -->
+            </article>
+        </main>
+        <script type="module" src="./scripts/main.js"></script>
+    </body>
 </html>

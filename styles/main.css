@@ -1,3 +1,17 @@
 @import "./criminals.css";
 @import "./notes.css";
 @import "./filters.css";
+@import "./associate.css";
+
+body{
+    background: #629677
+}
+
+/* Main Color Palette */
+/* 
+    #D1D5DE
+    #BE6E46
+    #1A181B
+    #629677
+    #27233A
+*/

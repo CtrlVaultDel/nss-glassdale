@@ -24,19 +24,19 @@ const render = officersCollection => {
     `;
 };
 
-
+// Listen for a change event to occur in the main container and see if it was the officer filter
 eventHub.addEventListener("change", changeEvent => {
     if (changeEvent.target.id === "officerSelect") {
         // Get the name of the selected officer
-        const selectedOfficer = changeEvent.target.value
+        const selectedOfficer = changeEvent.target.value;
 
         // Define a custom event
         const customEvent = new CustomEvent("officerSelected", {
             detail: {
                 officer: selectedOfficer
             }
-        })
+        });
         // Dispatch event to event hub
-        eventHub.dispatchEvent(customEvent)
+        eventHub.dispatchEvent(customEvent);
     }
 })

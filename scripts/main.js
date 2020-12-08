@@ -3,6 +3,8 @@ import { criminalList } from "./criminals/criminalList.js";
 import { noteForm } from "./notes/noteForm.js";
 import { noteList } from "./notes/noteList.js";
 import { officerSelect } from "./officers/officerSelection.js";
+import "./alibis/alibiSelection.js";
+import "./alibis/alibiList.js";
 
 // Sends filter options based off convictions(crimes) to the DOM
 convictionSelect();
