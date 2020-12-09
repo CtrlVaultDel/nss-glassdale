@@ -15,7 +15,7 @@ eventHub.addEventListener("click", event => {
             
             // Save the criminal object to a local variable who's id matches the one above
             const selectedCriminal = allCriminals.find(criminal => criminal.id === parseInt(identity[1]));
-
+            
             // Save the criminal's full name.
             const criminalName = selectedCriminal.name;
 

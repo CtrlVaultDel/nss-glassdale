@@ -5,6 +5,8 @@ import { noteList } from "./notes/noteList.js";
 import { officerSelect } from "./officers/officerSelection.js";
 import "./alibis/alibiSelection.js";
 import "./alibis/alibiList.js";
+import { witnessList } from "./witnesses/witnessList.js";
+import "./switchPage.js";
 
 // Sends filter options based off convictions(crimes) to the DOM
 convictionSelect();
@@ -20,3 +22,6 @@ noteList();
 
 // Sends the full list of criminals to the DOM
 criminalList();
+
+// Prepares the full list of witnesses to be displayed on the DOM (Initially hidden)
+witnessList();

@@ -7,3 +7,21 @@
 .filter{
     margin: 0 5px;
 }
+
+.filterButtons{
+    display:flex;
+    justify-content: center;
+    margin: 1%;
+}
+
+.filterBtn{
+    width: 85px;
+    align-self: center;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0 10px;
+}
+
+.filterBtn:hover{
+    background: #BE6E46;
+}

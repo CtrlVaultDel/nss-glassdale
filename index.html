@@ -8,7 +8,7 @@
     <body>
         <!-- The <main> element will be considered the "event hub" -->
         <main class="container"> 
-            <header>
+            <header class="mainFilters">
                 <div class="filters">
                     <div class="filter filters__crime">
                         <!-- A filter provided by JS that allows the user to filter via convictions/crimes -->
@@ -27,11 +27,18 @@
             <article class="notesContainer">
                 <!-- Notes will be added by JS -->
             </article>
+            <article class="filterButtons">
+                <button id="seeWitnesses-btn" class="filterBtn">See Witnesses</button>
+                <button id="seeCriminals-btn" class="filterBtn hide">See Criminals</button>
+            </article>
             <article class="alibisContainer">
                 <!-- Associates' alibis for a selected criminal will appear here -->
             </article>
             <article class="criminalsContainer">
                 <!-- Criminals will be added here by JS -->
+            </article>
+            <article class="witnessesContainer hide">
+                <!-- Witnesses will be added here by JS -->
             </article>
         </main>
         <script type="module" src="./scripts/main.js"></script>

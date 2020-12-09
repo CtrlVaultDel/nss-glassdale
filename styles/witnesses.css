@@ -1,0 +1,24 @@
+.witnessesContainer{
+    display:flex;
+    max-width: 80%;
+    min-width: 20%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.witness{
+    border: dotted black 1px;
+    padding: 10px;
+    margin: 15px;
+    width: 185px;
+    min-width: 160px;
+    height: 90px;
+    background: #27233A;
+    color: #BE6E46;
+    border-radius: 20px;
+}
+
+.witness__name{
+    margin-bottom: 20px;
+}
