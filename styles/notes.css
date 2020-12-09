@@ -18,6 +18,10 @@
     border-radius: 5px;
 }
 
+.noteFormContainer button:hover{
+    background: #BE6E46;
+}
+
 .noteForm{
     display: flex;
     flex-direction: column;

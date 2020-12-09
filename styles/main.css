@@ -2,9 +2,14 @@
 @import "./notes.css";
 @import "./filters.css";
 @import "./associate.css";
+@import "./witnesses.css";
 
 body{
     background: #629677
+}
+
+.hide{
+    display:none;
 }
 
 /* Main Color Palette */
