@@ -8,7 +8,6 @@ const seeWitnessesBtn = document.getElementById("seeWitnesses-btn");
 const seeCriminalsBtn = document.getElementById("seeCriminals-btn");
 
 eventHub.addEventListener("click", event => {
-    console.log(event.target.id)
     if(event.target.id === "seeWitnesses-btn"){
         // Hide these elements
         topFilters.classList.add("hide");
