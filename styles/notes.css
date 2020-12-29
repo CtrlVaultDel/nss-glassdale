@@ -4,7 +4,7 @@
     margin: 10px;
 }
 
-.noteFormContainer input, textarea{
+.noteFormContainer input, textarea, select{
     padding: 3px;
     margin: 5px;
     border-style: none;

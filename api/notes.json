@@ -1,11 +1,18 @@
 {
   "notes": [
     {
-      "text": "Mrs. Howell dropkicked a baguette out of someone's hands today during an altercation.",
-      "author": "Officer Sirbro",
-      "suspect": "Adrienne Howell",
-      "timestamp": "12/3/20",
+      "text": "Criminal was reportedly found dropkicking a kite out of mid-air.",
+      "author": "Officer McBroman",
+      "criminalId": 74,
+      "timestamp": "2020-12-29T23:32:44.457Z",
       "id": 1
+    },
+    {
+      "text": "Emory is under consideration for release due to good behavior",
+      "author": "Officer Chuck",
+      "criminalId": 80,
+      "timestamp": "2020-12-29T23:41:53.509Z",
+      "id": 2
     }
   ]
 }
