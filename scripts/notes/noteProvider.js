@@ -18,6 +18,7 @@ export const getNotes = () => {
 
 export const useNotes = () => notes.slice();
 
+// Saves new notes to the API
 export const saveNote = note => {
     return fetch('http://localhost:8088/notes', {
         method: "POST",
@@ -29,3 +30,11 @@ export const saveNote = note => {
     .then(getNotes)
     .then(dispatchStateChangeEvent);
 };
+
+// Deletes notes from the API
+export const deleteNote = noteId => {
+    return fetch(`http://localhost:8088/notes/${noteId}`,{
+        method: "DELETE"
+    })
+    .then(getNotes)
+}
