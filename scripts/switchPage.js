@@ -7,6 +7,9 @@ const witnessListing = document.querySelector(".witnessesContainer");
 const seeWitnessesBtn = document.getElementById("seeWitnesses-btn");
 const seeCriminalsBtn = document.getElementById("seeCriminals-btn");
 
+// This is responsible for switching between states:
+// 1) Witnesses & Notes
+// 2) Criminals & Notes
 eventHub.addEventListener("click", event => {
     if(event.target.id === "seeWitnesses-btn"){
         // Hide these elements
