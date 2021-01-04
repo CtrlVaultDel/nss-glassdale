@@ -46,7 +46,7 @@ checkBox.addEventListener("change", event => {
     if(event.target.id === "note--checkbox"){
         const notesContainer = document.querySelector(".notesContainer");
         // If the checkbox is checked, display the notes
-        if (event.target.checked === true){
+        if (event.target.checked){
             notesContainer.style.display = "flex";
         }
         // If the checkbox is NOT checked, hide the notes
