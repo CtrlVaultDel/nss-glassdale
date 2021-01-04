@@ -1,7 +1,6 @@
 // Imports
-import { getNotes, useNotes } from "./noteProvider.js";
+import { getNotes, useNotes, deleteNote} from "./noteProvider.js";
 import { getCriminals, useCriminals } from "../criminals/criminalProvider.js";
-import { noteHTMLer } from "./note.js";
 
 // Selectors
 const eventHub = document.querySelector(".container");
@@ -20,6 +19,7 @@ const render = (noteCollection, criminalCollection) => {
                 <div class="note__author"><b>Author: </b>${note.author}</div>
                 <div class="note__criminal"><b>Criminal: </b>${relatedCriminal.name}</div>
                 <div class="note__date"><b>Date: </b>${new Date(note.timestamp).toLocaleDateString('en-US')}</div>
+                <button id="deleteNote--${note.id}">Delete</button>
             </section>
         `
     })
@@ -55,3 +55,18 @@ checkBox.addEventListener("change", event => {
         };
     };
 });
+
+// Listens for a delete event
+eventHub.addEventListener("click", clickEvent => {
+    if(clickEvent.target.id.startsWith("deleteNote--")) {
+        const [prefix, id] = clickEvent.target.id.split("--")
+
+        // Invoke the delete operatiopn
+        // update the new list of notes after the deletion has taken place
+        deleteNote(id).then(() =>{
+            const updatedNotes = useNotes();
+            const criminals = useCriminals();
+            render(updatedNotes, criminals);
+        })
+    }
+})
