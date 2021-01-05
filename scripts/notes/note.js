@@ -1,3 +1,6 @@
+// Selector
+const noteLocation = document.querySelector(".notesContainer");
+
 export const renderNotes = (noteCollection, criminalCollection) => {
     noteLocation.innerHTML = noteCollection.map(note => {
         const relatedCriminal = criminalCollection.find(criminal => criminal.id === note.criminalId)
@@ -10,5 +13,5 @@ export const renderNotes = (noteCollection, criminalCollection) => {
                 <button id="deleteNote--${note.id}">Delete</button>
             </section>
         `
-    })
-}
+    }).join("");
+};
