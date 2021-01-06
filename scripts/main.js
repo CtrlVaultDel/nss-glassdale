@@ -7,6 +7,7 @@ import "./alibis/alibiSelection.js";
 import "./alibis/alibiList.js";
 import { witnessList } from "./witnesses/witnessList.js";
 import "./switchPage.js";
+import { facilityList } from "./facility/facilityList.js";
 
 // Sends filter options based off convictions(crimes) to the DOM
 convictionSelect();
@@ -25,3 +26,6 @@ criminalList();
 
 // Prepares the full list of witnesses to be displayed on the DOM (Initially hidden)
 witnessList();
+
+// Prepares the full list of facilities to be displayed on the DOM (initially hidden)
+facilityList();
