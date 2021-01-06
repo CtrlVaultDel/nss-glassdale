@@ -14,14 +14,14 @@ let criminals = [];
 // Displays the notes on the DOM (if the display notes box is checked)
 export const noteList = () => {
     getNotes()
-        .then(getCriminals()
+        .then(getCriminals)
         .then(() => {
             notes = useNotes();
             criminals = useCriminals();
 
             // Renders notes to the page
             renderNotes(notes, criminals);
-    }));
+    });
 };
 
 // Listen to see if the notes are updated and push them to the DOM when they are

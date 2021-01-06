@@ -10,10 +10,28 @@
     margin: 15px;
     width: 185px;
     min-width: 160px;
-    height: 185px;
+    height: 290px;
     background: #27233A;
     color: #BE6E46;
     border-radius: 20px;
+}
+
+.criminal__facilities{
+    text-align: center;
+}
+
+.criminal__facilities__header{
+    text-align: center;
+}
+
+.criminal ul{
+    list-style-type: none;
+    margin: 0, auto;
+    padding: 0;
+}
+
+.criminal li{
+    margin-bottom: 5px;
 }
 
 .button--container{
