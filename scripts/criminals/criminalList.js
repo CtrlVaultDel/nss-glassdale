@@ -27,7 +27,7 @@ export const criminalList = () => {
 // Renders the criminals to the DOM that were selected based off of the selected filter
 const render = (criminalCollection) => {
     getFacilities()
-    .then(getCriminalFacilities())
+    .then(getCriminalFacilities)
     .then(() => {
         // Store facilities and criminal relationship to facilities
         const allFacilities = useFacilities();
