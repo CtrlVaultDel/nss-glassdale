@@ -9,13 +9,6 @@ const contentElement = document.querySelector(".criminalsContainer");
 const eventHub = document.querySelector(".container");
 
 export const criminalList = () => {
-    /* 
-    We can use .then on the getCriminals() function because it returns a promise object.
-    As soon as the promise has been resolved, this then calls on useCriminals() which
-    returns a copied array of objects that is then stored into the empty criminals array.
-    the criminals array is then converted into HTML and joined together via the reduce method
-    and criminalHTMLer() function from ./criminal.js
-    */
     getCriminals()
     .then(() => {
         const criminals = useCriminals();

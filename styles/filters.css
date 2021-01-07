@@ -1,3 +1,7 @@
+#seeCriminals-btn {
+    order: -1;
+}
+
 .filters{
     display: flex;
     justify-content: center;
