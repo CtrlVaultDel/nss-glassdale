@@ -2,7 +2,7 @@
 export const facilityHTMLer = (facilityObject, criminals) =>{
     return `
     <section class="facility">
-        <h2 class="facility__name"><b>Name: </b>${facilityObject.facilityName}</h2>
+        <h2 class="facility__name">${facilityObject.facilityName}</h2>
         <div class="facility__security"><b>Security: </b>${facilityObject.securityLevel}</div>
         <div class="facility__capacity"><b>Capacity: </b>${facilityObject.capacity}</div>
         <div class="facility__criminalsHeader"><b>Criminals:</b></div>
